@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "run_countdowner"
+version = "1.0.0"
+description = "A Python 3.8+ script to collect some product sales information from Countdown grocery store"
+authors = ["Alex Raichev"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+countdowner = {git = "https://github.com/araichev/countdowner.git"}
+python-dotenv = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
