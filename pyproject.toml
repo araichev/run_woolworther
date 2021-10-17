@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "run_countdowner"
-version = "1.0.0"
-description = "A Python 3.8+ script to collect some product sales information from Countdown grocery store"
+version = "1.1.0"
+description = "A Python 3.9+ script to collect some product sales information from Countdown grocery store"
 authors = ["Alex Raichev"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-countdowner = {git = "https://github.com/araichev/countdowner.git"}
+python = "^3.9"
+countdowner = {git = "https://gitlab.com/araichev/countdowner.git", rev="4.1.1"}
 python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
