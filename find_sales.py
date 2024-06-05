@@ -1,6 +1,6 @@
 import os
 
-import countdowner as cd
+import woolworther as ww
 import dotenv as de
 
 
@@ -14,7 +14,7 @@ if not U or not P:
     raise ValueError("Could not find GMail credentials")
 
 # Run pipeline
-config = [
+recipients_and_watchlists = [
     ["ibatatas@runbox.com", "https://docs.google.com/spreadsheets/d/1Cu8wEckdfGPtkN9zj5H8O_4ZUrQyrXBZ8Um-K2BSlnc/edit?usp=sharing"],
     ["jenklosser@gmail.com", "https://docs.google.com/spreadsheets/d/1IXh32XgrUq1O_xWq5SqXZlhwGmoK2tChwFqP2AEXJUo/edit?usp=sharing"],
     ["helena.teichrib@gmail.com", "https://docs.google.com/spreadsheets/d/1v2ZmJrSwSok0dTeVV6KBksAVa_eTTFE2YDQheXAYZT4/edit?usp=sharing"],
@@ -22,13 +22,14 @@ config = [
     ["jesse.p.prendergast@gmail.com", "https://docs.google.com/spreadsheets/d/10X11TILgnFvOyEs6K1rntTOvE2w3WmsxLKWsk5ALTjM/edit?usp=sharing"],
     ["cstewart000@gmail.com", "https://docs.google.com/spreadsheets/d/16oAl4UZNHN9wSOK_n0y_yBv7FVZ5y3IlkF9gygwoH7E/edit?usp=sharing"],
 ]
-for email, url in config:
-    print(f"Working on watchlist for {email}...")
-    f = cd.run_pipeline(
-        url,
-        recipients=[email],
+for recipient, watchlist in recipients_and_watchlists:
+    print(f"Working on watchlist for {recipient}...")
+    f = ww.run_pipeline(
+        watchlist,
+        recipients=[recipient],
         gmail_username=U,
         gmail_password=P,
         sales_only=True,
+        headers={"From": "Woolworther"},
     )
 

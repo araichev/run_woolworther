@@ -1,6 +1,6 @@
-Run Countdowner
+Run Woolworther
 ***************
-A Python 3.9+ script to collect some product sales information from Countdown grocery store.
+A Python 3.9+ script to collect some product sales information from Woolworths grocery stores in New Zealand.
 
 
 Authors
@@ -10,6 +10,11 @@ Authors
 
 Changes
 =======
+
+1.2.0, 2024-06-06
+-----------------
+- Changed name.
+- Updated dependencies.
 
 1.1.0, 2021-10-18
 -----------------
