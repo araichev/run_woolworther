@@ -1,16 +1,16 @@
 [tool.poetry]
-name = "run_countdowner"
+name = "run_woolworther"
 version = "1.1.0"
-description = "A Python 3.9+ script to collect some product sales information from Countdown grocery store"
+description = "A Python 3.9+ script to collect some product sales information from Woolworths grocery store"
 authors = ["Alex Raichev"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-countdowner = {git = "https://gitlab.com/araichev/countdowner.git"}
-python-dotenv = "^0.15.0"
+python = ">=3.9, <4.0"
+woolworther = {git = "https://github.com/araichev/woolworther.git"}
+python-dotenv = ">=0.15.0"
 
 [tool.poetry.dev-dependencies]
-jupyter = "^1.0.0"
+jupyter = ">=1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
